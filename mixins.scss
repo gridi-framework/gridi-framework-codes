@@ -1,0 +1,22 @@
+//Code
+//@mixin code-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin code-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, background-color);
+    @include property-from-map($colors-map, color);
+    @if mixin-exists(code-extra-colors-propertys) {
+        @include code-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin code-colors($colors-map) {
+    code {
+        @include code-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-code-colors($class, $colors-map) {
+    code.#{$class} {
+        @include code-colors-propertys($colors-map);
+    }
+}

@@ -1,0 +1,21 @@
+code {
+    display: $code-display;
+    @include background-shorthand((
+        image: $code-background-image,
+        position: $code-background-position,
+        repeat: $code-background-repeat,
+        color: $code-background-color,
+        attachment: $code-background-attachment,
+        make-shorthand: true
+    ));
+    @include padding-shorthand((
+        top: $code-padding-top, 
+        bottom: $code-padding-bottom, 
+        left: $code-padding-left, 
+        right: $code-padding-right
+    ));
+    font-family: $code-font-family;
+    @if mixin-exists(code-extra-style) {
+        @include code-extra-style();
+    }
+}

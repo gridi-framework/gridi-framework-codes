@@ -1,0 +1,13 @@
+//Code
+$code-display: inline-block;
+$code-background-image: null !default;
+$code-background-position: null !default;
+$code-background-repeat: null !default;
+$code-background-color: get-color(grey, 200) !default;
+$code-background-attachment: null !default;
+$code-padding-top: $inline-background-elements-padding-top !default;
+$code-padding-bottom: $inline-background-elements-padding-bottom !default;
+$code-padding-left: $inline-background-elements-padding-left !default;
+$code-padding-right: $inline-background-elements-padding-right !default;
+$code-font-family: $document-monospace-font-family !default;
+//@mixin code-extra-style() {} //Create this mixin before import module when you want add some special style for element
